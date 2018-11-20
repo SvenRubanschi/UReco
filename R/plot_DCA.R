@@ -1,13 +1,13 @@
-#' Plots a Detrended correspondence analysis
+#' Plots a Detrended Correspondence Analysis
+#' 
+#' Points are the sites
 #'
-#' Pointts are the sites
-#'
-#' @param veg vegetation matirx
-#' @param env envirement matrix
-#' @param group.col collom in which the group is standing
-#' @param r.cutoff_env the R²-cutoff of the enviremnt
+#' @param veg vegetation matrix
+#' @param env environment matrix
+#' @param group.col column in which the group is standing
+#' @param r.cutoff_env the R²-cutoff of the environment
 #' @param r.cutoff_spec the R²-cutoff of the species
-#' @param colvec colorvector of the groups
+#' @param colvec colour vector of the groups
 #' @param pch point shape
 #' @param lty line shape
 #' @param lwd line size
@@ -17,8 +17,9 @@
 #' @param ordhull circled the groups
 #'
 #'
-#' @return Plots a grouped DCA with fitted species and envirment vectors
-#'
+#' @return Plots a grouped DCA with fitted species and environment vectors
+#' 
+#' 
 #' @examples
 #' out <- select.envfit(select.envfit(envfit(DCA, Env, perm = 1000), r.select = "0.3"))
 #'
