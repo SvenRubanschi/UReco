@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' out <- select.envfit(select.envfit(envfit(DCA, Env, perm = 1000), r.select = "0.3"))
-
+#' 
 #' @export
 plot_NMDS <- function(veg, env, group.col = 0, r.cutoff_env = 0.3, r.cutoff_spec = 0.3, colvec,
                      pch = 20, lty = 1, lwd = 1, cex = 1, cex.lab = 1,  cex.leg = 1, ordihull = F){
