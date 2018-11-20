@@ -19,10 +19,9 @@
 #'
 #' @return Plots a grouped NMDS with fitted species and environment vectors
 #' 
-#'
 #' @examples
-#' out <- select.envfit(select.envfit(envfit(DCA, Env, perm = 1000), r.select = "0.3"))
-#' 
+#' NO
+#'  
 #' @export
 plot_NMDS <- function(veg, env, group.col = 0, r.cutoff_env = 0.3, r.cutoff_spec = 0.3, colvec,
                      pch = 20, lty = 1, lwd = 1, cex = 1, cex.lab = 1,  cex.leg = 1, ordihull = F){
@@ -40,9 +39,9 @@ plot_NMDS <- function(veg, env, group.col = 0, r.cutoff_env = 0.3, r.cutoff_spec
     vec.env <- env[,num]
   }
   NMDS = vegan::metaMDS(veg, k= 2, try= 100, trace = 0)
-  SPEC <- UReco::select.envfit(vegan::envfit(NMDS, veg, perm = 1000), r.select = r.cutoff_spec)
+  SPEC <- simpECO::select.envfit(vegan::envfit(NMDS, veg, perm = 1000), r.select = r.cutoff_spec)
   ENV <- if (exists("env") == T) {
-    UReco::select.envfit(vegan::envfit(NMDS, vec.env, perm = 1000), r.select = r.cutoff_env)
+    simpECO::select.envfit(vegan::envfit(NMDS, vec.env, perm = 1000), r.select = r.cutoff_env)
   }
   plot(NMDS, type = "n",xlab= "NMDS 1", ylab= "NMDS 2", cex = cex, cex.lab=cex.lab)
   if (group.col > 0) {

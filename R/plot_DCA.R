@@ -18,10 +18,6 @@
 #'
 #'
 #' @return Plots a grouped DCA with fitted species and environment vectors
-#' 
-#' 
-#' @examples
-#' out <- select.envfit(select.envfit(envfit(DCA, Env, perm = 1000), r.select = "0.3"))
 #'
 #' @export
 plot_DCA <- function(veg, env, group.col = 0, r.cutoff_env = 0.3, r.cutoff_spec = 0.3, colvec,
@@ -40,9 +36,9 @@ plot_DCA <- function(veg, env, group.col = 0, r.cutoff_env = 0.3, r.cutoff_spec 
     vec.env <- env[,num]
   }
   DCA <- vegan::decorana(veg)
-  SPEC <- UReco::select.envfit(vegan::envfit(DCA, veg, perm = 1000), r.select = r.cutoff_spec)
+  SPEC <- simpECO::select.envfit(vegan::envfit(DCA, veg, perm = 1000), r.select = r.cutoff_spec)
   ENV <- if (exists("env") == T) {
-    UReco::select.envfit(vegan::envfit(DCA, vec.env, perm = 1000), r.select = r.cutoff_env)
+    simpECO::select.envfit(vegan::envfit(DCA, vec.env, perm = 1000), r.select = r.cutoff_env)
   }
   DCA_Ax1 <- paste("DCA1:", format(round(DCA$evals[1], 3), nsmall = 3))
   DCA_Ax2 <- paste("DCA2:", format(round(DCA$evals[2], 3), nsmall = 3))

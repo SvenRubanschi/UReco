@@ -1,4 +1,4 @@
-#' Not working yet but soon
+#' Not working yet but soon...
 #' 
 #' @export
 env_boxplot <- function(env, group.col = 0, col.sel){
