@@ -2,10 +2,10 @@
 % Please edit documentation in R/env_boxplot.R
 \name{env_boxplot}
 \alias{env_boxplot}
-\title{Not working yet but soon}
+\title{Not working yet but soon...}
 \usage{
 env_boxplot(env, group.col = 0, col.sel)
 }
 \description{
-Not working yet but soon
+Not working yet but soon...
 }
