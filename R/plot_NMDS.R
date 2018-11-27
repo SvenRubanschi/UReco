@@ -27,6 +27,7 @@ plot_NMDS <- function(veg, env, group.col = 0, r.cutoff_env = 0.3, r.cutoff_spec
                      pch = 20, lty = 1, lwd = 1, cex = 1, cex.lab = 1,  cex.leg = 1, ordihull = F){
   if (group.col > 0) {
     names(env)[group.col] <- "group"
+    env$group <- as.factor(env$group)
     env$group <- droplevels(env$group)
     vec.env <- env[-c(group.col)]
     colvec <- if (exists("colvec") == T){

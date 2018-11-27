@@ -5,7 +5,7 @@ env_boxplot <- function(env, group.col = 0, col.sel){
   if (group.col == 0){
     stop('column of the groups is missing')
   } else {
-    group <- env[group.col]
+    group <- as.factor(env[group.col])
     env <- env[-c(group.col)]
   }
   if (exists("col.sel") == T){
