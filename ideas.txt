@@ -1,0 +1,3 @@
+create output for ordinations
+	* with indicator species analyse
+create function for weighting indicator values
