@@ -20,8 +20,8 @@ env_boxplot <- function(env, group.col = 0, col.sel){
     use <- data.frame(env[i], group)
     colnames(use) <- c("Var", "Group")
     out <- PMCMR::posthoc.kruskal.dunn.test(Var~Group,
-                                     data = use,
-                                     p.adjust="bonf")
+                                            data = use,
+                                            p.adjust="bonf")
     out.p <- PMCMR::get.pvalues(out)
     out.mcV <- multcompView::multcompLetters(out.p, threshold = 0.05)
     letter <- data.frame(out.mcV$Letters)
@@ -31,7 +31,13 @@ env_boxplot <- function(env, group.col = 0, col.sel){
     over <- 0.1*max( a$stats[nrow(a$stats),] )
     text(c(1:nlevels(use$Group)) , a$stats[nrow(a$stats),]+over , letter[,1])
     result[[i]] <- c(env_Obs[i],out.p)
-    result_p.value <- do.call(rbind, result)
+    result_p.value <- as.data.frame(do.call(rbind, result))
+    trans <- sapply(result_p.value, is.factor)
+    trans[1] <- FALSE
+    result_p.value[trans] <- lapply(result_p.value[trans], function(x) as.numeric(as.character(x)))
+    colnames(result_p.value)[1]<- "Variables"
+    is.num <- sapply(result_p.value, is.numeric)
+    result_p.value[is.num] <- lapply(result_p.value[is.num], round, 4)
   }
   return(result_p.value)
 }
