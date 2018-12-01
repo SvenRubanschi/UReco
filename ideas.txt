@@ -4,3 +4,5 @@ create function for weighting indicator values
   * create a database for Ellenberg IV
   * add functional traits
   * add MWTF-IV
+  
+TODO
