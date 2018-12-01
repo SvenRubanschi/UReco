@@ -2,10 +2,26 @@
 % Please edit documentation in R/env_boxplot.R
 \name{env_boxplot}
 \alias{env_boxplot}
-\title{Not working yet but soon...}
+\title{Produces a boxplot for more than two groups}
 \usage{
 env_boxplot(env, group.col = 0, col.sel)
 }
+\arguments{
+\item{env}{table od data}
+
+\item{group.col}{column of the group info}
+
+\item{col.sel}{possible selection of column}
+}
 \description{
-Not working yet but soon...
+Produces a boxplot and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
+}
+\note{
+A tie correction will be employed according to Glantz (2012).\cr
+Glantz SA (2012). \emph{Primer of biostatistics}. 7 edition. McGraw Hill, New York.
+}
+\examples{
+results <- env_boxplot(env = iris,group.col = 5, col.sel = c(1:3))
+results
+
 }

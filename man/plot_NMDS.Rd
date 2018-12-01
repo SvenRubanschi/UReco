@@ -2,10 +2,10 @@
 % Please edit documentation in R/plot_NMDS.R
 \name{plot_NMDS}
 \alias{plot_NMDS}
-\title{Plots a Nonmetric Multidimensional Scaling}
+\title{Plots a Nonmetric Multidimensional Scaling (NMDS)}
 \usage{
-plot_NMDS(veg, env, group.col = 0, r.cutoff_env = 0.3,
-  r.cutoff_spec = 0.3, colvec, pch = 20, lty = 1, lwd = 1,
+plot_NMDS(veg, env = NULL, group.col = 0, r.cutoff_env = 0.3,
+  r.cutoff_spec = 0.3, colvec = NULL, pch = 20, lty = 1, lwd = 1,
   cex = 1, cex.lab = 1, cex.leg = 1, ordihull = F)
 }
 \arguments{
@@ -19,7 +19,7 @@ plot_NMDS(veg, env, group.col = 0, r.cutoff_env = 0.3,
 
 \item{r.cutoff_spec}{the R²-cutoff of the species}
 
-\item{colvec}{colour vector of the groups}
+\item{colvec}{colour vector of the groups like c("col1","col2","col3") or c(1,2,3)}
 
 \item{pch}{point shape}
 
@@ -35,13 +35,16 @@ plot_NMDS(veg, env, group.col = 0, r.cutoff_env = 0.3,
 
 \item{ordhull}{circled the groups}
 }
-\value{
-Plots a grouped NMDS with fitted species and environment vectors
-}
 \description{
-Points are the sites
+Performs a NMDS with fitted vectors of species and environment selected by a certain r2-cutoff
+}
+\note{
+The points are the sites. Environmental parameter will be transformed into numeric.
 }
 \examples{
-NO
+library(vegan)
+data(dune)
+data(dune.env)
+plot_DCA(veg = dune, env = dune.env[-4], group.col = 3 , r.cutoff_env = 0.2, r.cutoff_spec = 0.2)
  
 }
