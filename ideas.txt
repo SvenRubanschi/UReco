@@ -11,3 +11,4 @@ create function for overlay-analyses
   * calculate loss and win of this land use type
 
 TODO
+  * better way to present p values
