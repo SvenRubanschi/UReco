@@ -32,7 +32,6 @@ plot_NMDS <- function(veg, env = NULL, group.col = 0, r.cutoff_env = 0.3, r.cuto
     names(env)[group.col] <- "group"
     env$group <- as.factor(env$group)
     env$group <- droplevels(env$group)
-    vec.env <- env[-c(group.col)]
     num <- unlist(lapply(vec.env, is.numeric))
     vec.env <- vec.env[,num]
     colvec <- if (is.null(colvec) ==  T){

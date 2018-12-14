@@ -4,12 +4,12 @@
 \alias{env_boxplot}
 \title{Produces a boxplot for more than two groups}
 \usage{
-env_boxplot(env, group.col = 0, col.sel)
+env_boxplot(env, group.col = 0, col.sel = NULL)
 }
 \arguments{
-\item{env}{table od data}
+\item{env}{table of data (must be numeric)}
 
-\item{group.col}{column of the group info}
+\item{group.col}{column of the group info (must be a factor)}
 
 \item{col.sel}{possible selection of column}
 }
@@ -21,7 +21,7 @@ A tie correction will be employed according to Glantz (2012).\cr
 Glantz SA (2012). \emph{Primer of biostatistics}. 7 edition. McGraw Hill, New York.
 }
 \examples{
-results <- env_boxplot(env = iris,group.col = 5, col.sel = c(1:3))
+results <- env_boxplot(env = iris, group.col = 5, col.sel = c(1:3))
 results
 
 }
