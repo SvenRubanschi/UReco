@@ -33,7 +33,8 @@ plot_DCA <- function(veg, env = NULL, weigth = 0, group.col = 0, r.cutoff_env = 
     names(env)[group.col] <- "group"
     env$group <- as.factor(env$group)
     env$group <- droplevels(env$group)
-    num <- unlist(lapply(env[-group.col], is.numeric))
+    vec.env <- env[-group.col]
+    num <- unlist(lapply(vec.env, is.numeric))
     vec.env <- vec.env[,num]
     colvec <- if (is.null(colvec) == T){
       grDevices::rainbow(nlevels(env$group))
