@@ -28,7 +28,7 @@ env_boxplot <- function(env, group.col = 0, col.sel = NULL){
     env_Obs <- colnames(env)
   }
   X <- ncol(env)
-  result <- list()
+  result <- NULL
   for(i in 1:X) {
     use <- data.frame(env[i], group)
     colnames(use) <- c("Var", "Group")
@@ -43,14 +43,13 @@ env_boxplot <- function(env, group.col = 0, col.sel = NULL){
                 ,las=1)
     over <- 0.1*max( a$stats[nrow(a$stats),] )
     text(c(1:nlevels(use$Group)) , a$stats[nrow(a$stats),]+over , letter[,1])
-    result[[i]] <- c(env_Obs[i],out.p)
-    result_p.value <- as.data.frame(do.call(rbind, result))
-    trans <- sapply(result_p.value, is.factor)
-    trans[1] <- FALSE
-    result_p.value[trans] <- lapply(result_p.value[trans], function(x) as.numeric(as.character(x)))
-    colnames(result_p.value)[1]<- "Variables"
-    is.num <- sapply(result_p.value, is.numeric)
-    result_p.value[is.num] <- lapply(result_p.value[is.num], round, 3)
+    p <- format.pval(out.p, digits = 2, eps = 0.001, nsmall = 3)
+    lin <- c(env_Obs[i],p)
+    result <- rbind(result, lin)
+    result_p.value <- as.data.frame(result)
+    rownames(result_p.value) <- result_p.value[,1]
+    result_p.value <- result_p.value[,-1]
+    colnames(result_p.value) <- names(out.p)
   }
   return(result_p.value)
 }
