@@ -1,14 +1,14 @@
 create output for ordinations
 	* with indicator species analyse
 create function for weighting indicator values
-  * create a database for Ellenberg IV
+  * create a database for Ellenberg IV ... necessary??? 
   * add functional traits
   * add MWTF-IV
 create function for overlay-analyses
-  * taking GIS output 
+  * taking GIS .shp 
   * calculate the proportion of land use per slide
   * calculate the land use history and the age of a land use type
   * calculate loss and win of this land use type
 
 TODO
-  * better way to present p values
+  * create result output for ordination
