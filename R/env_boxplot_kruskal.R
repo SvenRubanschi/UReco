@@ -54,8 +54,8 @@ env_boxplot_kruskal <- function(env, group.col = 0, col.sel = NULL){
                 ,las=1)
     over <- 0.1*max( a$stats[nrow(a$stats),] )
     text(c(1:nlevels(use$Group)) , a$stats[nrow(a$stats),]+over , letter[,1])
-    mean_val <- aggregate(use[,1], list(use$Group), mean)
-    sd_val <- aggregate(use[,1], list(use$Group), sd)
+    mean_val <- aggregate(use[,1], list(use$Group), mean, na.rm = T)
+    sd_val <- aggregate(use[,1], list(use$Group), sd, na.rm = T)
     block <- as.data.frame(c(mean_val,letter[1],sd_val[2]), row.names = 1)
     result_row <- t(t(block)[,1])
     for (j in 2:nlevels(group$group)) {
