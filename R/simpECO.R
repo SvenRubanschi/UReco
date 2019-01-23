@@ -1,4 +1,4 @@
-#' UR_eco Package
+#' simpECO Package
 #'
 #' Analyse commen ecological data
 #'

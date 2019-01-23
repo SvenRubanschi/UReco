@@ -4,7 +4,7 @@
 \name{simpECO}
 \alias{simpECO}
 \alias{simpECO-package}
-\title{UR_eco Package}
+\title{simpECO Package}
 \description{
 Analyse commen ecological data
 }
