@@ -1,6 +1,6 @@
 #' Dose the R²-cutoff
 #'
-#' what it dose
+#' Selects the fitted vectors of a ordination by the R²-cutoff
 #'
 #' @param fit fitted enviermental vecoter from vegen
 #' @param r.select R²-cutoff
