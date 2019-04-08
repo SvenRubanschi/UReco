@@ -15,7 +15,7 @@ select.envfit(fit, r.select)
 the fittet enviremantal vectors witour the r² valu ounder the cutoff
 }
 \description{
-what it dose
+Selects the fitted vectors of a ordination by the R²-cutoff
 }
 \examples{
 fit <- envfit(ord, env, permutations = 1000)
