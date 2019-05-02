@@ -2,7 +2,7 @@
 % Please edit documentation in R/env_boxplot_kruskal.R
 \name{env_boxplot_kruskal}
 \alias{env_boxplot_kruskal}
-\title{Produces a boxplot for more than two groups}
+\title{Produces a boxplots for more than two groups}
 \usage{
 env_boxplot_kruskal(env, group.col = 0, col.sel = NULL)
 }
@@ -14,14 +14,14 @@ env_boxplot_kruskal(env, group.col = 0, col.sel = NULL)
 \item{col.sel}{possible selection of column (with or without the group.col)}
 }
 \description{
-Produces a boxplot and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
+Produces boxplots and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
 }
 \note{
 A tie correction will be employed according to Glantz (2012).\cr
 Glantz SA (2012). \emph{Primer of biostatistics}. 7 edition. McGraw Hill, New York.
 }
 \examples{
-results <- env_boxplot(env = iris, group.col = 5, col.sel = c(1:3))
+results <- env_boxplot_kurskal(env = iris, group.col = 5, col.sel = c(1:3))
 results
 
 }
