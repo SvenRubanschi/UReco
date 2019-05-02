@@ -2,7 +2,7 @@
 % Please edit documentation in R/env_boxplot_2G.R
 \name{env_boxplot_2G}
 \alias{env_boxplot_2G}
-\title{Produces boxplots for than two groups}
+\title{Produces boxplots for two groups}
 \usage{
 env_boxplot_2G(env, type = NULL, group.col = 0)
 }

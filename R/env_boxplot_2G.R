@@ -1,4 +1,4 @@
-#' Produces boxplots for than two groups
+#' Produces boxplots for two groups
 #' 
 #' Produces boxplots and performs a U-Test or a t-Test. 
 #' 
