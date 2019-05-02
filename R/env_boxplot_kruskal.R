@@ -1,6 +1,6 @@
-#' Produces a boxplot for more than two groups
+#' Produces a boxplots for more than two groups
 #' 
-#' Produces a boxplot and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
+#' Produces boxplots and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
 #' 
 #' @param env table of data (must be numeric)
 #' @param group.col column of the group info (must be a factor)
@@ -10,20 +10,20 @@
 #' Glantz SA (2012). \emph{Primer of biostatistics}. 7 edition. McGraw Hill, New York.
 #' 
 #' @examples 
-#' results <- env_boxplot(env = iris, group.col = 5, col.sel = c(1:3))
+#' results <- env_boxplot_kurskal(env = iris, group.col = 5, col.sel = c(1:3))
 #' results
 #' 
 #' @export
 env_boxplot_kruskal <- function(env, group.col = 0, col.sel = NULL){
   if (group.col == 0){
-    stop('column of the groups is missing')
+    stop('column of the group information is missing')
   } else {
     names(env)[group.col] <- "group"
     env$group <- as.factor(env$group)
     env$group <- droplevels(env$group)
   }
   if (nlevels(env$group) < 3){
-    stop('less then 3 groups')
+    stop('less than 3 groups')
   } else {
     group <- env[group.col]
   }
