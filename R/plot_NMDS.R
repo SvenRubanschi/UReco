@@ -4,14 +4,14 @@
 #'
 #' @param veg vegetation matrix
 #' @param env environment matrix
-#' @param group.col column in which the group is standing
+#' @param group.col column of the group info
 #' @param r.cutoff_env the R²-cutoff of the environment
 #' @param r.cutoff_spec the R²-cutoff of the species
 #' @param colvec colour vector of the groups like c("col1","col2","col3") or c(1,2,3)
 #' @param pch point shape
 #' @param lty line shape
 #' @param lwd line size
-#' @param cex scaled plot
+#' @param cex scales plot
 #' @param cex.lab scale of label
 #' @param cex.leg scale of legend
 #' @param ordhull circled the groups

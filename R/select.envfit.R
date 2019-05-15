@@ -1,11 +1,11 @@
 #' Dose the R²-cutoff
 #'
-#' Selects the fitted vectors of a ordination by the R²-cutoff
+#' Selects the fitted vectors of a ordination by a certai the r²-cutoff
 #'
-#' @param fit fitted enviermental vecoter from vegen
-#' @param r.select R²-cutoff
+#' @param fit fitted vecoter from vegan
+#' @param r.select r²-cutoff
 #'
-#' @return the fittet enviremantal vectors witour the r² valu ounder the cutoff
+#' @return the fitted vectors without the r² value higher than the cutoff
 #'
 #' @examples
 #' fit <- envfit(ord, env, permutations = 1000)

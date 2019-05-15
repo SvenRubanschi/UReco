@@ -13,7 +13,7 @@ plot_NMDS(veg, env = NULL, group.col = 0, r.cutoff_env = 0.3,
 
 \item{env}{environment matrix}
 
-\item{group.col}{column in which the group is standing}
+\item{group.col}{column of the group info}
 
 \item{r.cutoff_env}{the R²-cutoff of the environment}
 
@@ -27,7 +27,7 @@ plot_NMDS(veg, env = NULL, group.col = 0, r.cutoff_env = 0.3,
 
 \item{lwd}{line size}
 
-\item{cex}{scaled plot}
+\item{cex}{scales plot}
 
 \item{cex.lab}{scale of label}
 

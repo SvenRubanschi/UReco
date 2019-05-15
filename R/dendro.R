@@ -1,15 +1,15 @@
 #' Hierarchical Cluster (Dendrogram)
 #'
-#' Creates a hierachical dendrogram. It is also possible to color the leaves by group.
+#' Creates a hierachical dendrogram. It is also possible to colour the leaves by group.
 #'
 #' @param veg vegetation matrix
 #' @param method method of the dissimilarity index
 #' @param env environment matrix with the group information
 #' @param group.col column in which the group is located
 #' @param colvec colour vector of the groups; like c("col1","col2","col3") or c(1,2,3)
-#' @param pch point vector of the groups; like c("shape1","shape2","chape3") or c(1,2,3)
-#' @param cex scaled plot
-#' @param lab.cex scale of label
+#' @param pch point vector of the groups; like c(1,2,3)
+#' @param cex scales plot
+#' @param lab.cex scales of label
 #' 
 #' @note Information about the different dissimilarity indexes read \code{\link[vegan]{vegdist}}
 #' 

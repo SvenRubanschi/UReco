@@ -7,15 +7,15 @@
 select.envfit(fit, r.select)
 }
 \arguments{
-\item{fit}{fitted enviermental vecoter from vegen}
+\item{fit}{fitted vecoter from vegan}
 
-\item{r.select}{R²-cutoff}
+\item{r.select}{r²-cutoff}
 }
 \value{
-the fittet enviremantal vectors witour the r² valu ounder the cutoff
+the fitted vectors without the r² value higher than the cutoff
 }
 \description{
-Selects the fitted vectors of a ordination by the R²-cutoff
+Selects the fitted vectors of a ordination by a certai the r²-cutoff
 }
 \examples{
 fit <- envfit(ord, env, permutations = 1000)

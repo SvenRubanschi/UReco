@@ -1,6 +1,6 @@
 #' Produces a boxplots for more than two groups
 #' 
-#' Produces boxplots and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
+#' Produces boxplots and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p-value of < 0.05.
 #' 
 #' @param env table of data (must be numeric)
 #' @param group.col column of the group info (must be a factor)

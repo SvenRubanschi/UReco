@@ -14,7 +14,7 @@ env_boxplot_kruskal(env, group.col = 0, col.sel = NULL)
 \item{col.sel}{possible selection of column (with or without the group.col)}
 }
 \description{
-Produces boxplots and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p value of < 0.05.
+Produces boxplots and performs a Kruskal-Wallis-Test with a posthoc Dunn’s Test. The letters are showing a significant difference with a p-value of < 0.05.
 }
 \note{
 A tie correction will be employed according to Glantz (2012).\cr

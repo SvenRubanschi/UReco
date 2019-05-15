@@ -18,14 +18,14 @@ dendro(veg, method = "bray", env = NULL, group.col = NULL,
 
 \item{colvec}{colour vector of the groups; like c("col1","col2","col3") or c(1,2,3)}
 
-\item{pch}{point vector of the groups; like c("shape1","shape2","chape3") or c(1,2,3)}
+\item{pch}{point vector of the groups; like c(1,2,3)}
 
-\item{cex}{scaled plot}
+\item{cex}{scales plot}
 
-\item{lab.cex}{scale of label}
+\item{lab.cex}{scales of label}
 }
 \description{
-Creates a hierachical dendrogram. It is also possible to color the leaves by group.
+Creates a hierachical dendrogram. It is also possible to colour the leaves by group.
 }
 \note{
 Information about the different dissimilarity indexes read \code{\link[vegan]{vegdist}}

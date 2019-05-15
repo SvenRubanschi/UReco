@@ -14,7 +14,7 @@ plot_DCA(veg, env = NULL, weigth = 0, group.col = 0,
 
 \item{env}{environment matrix (only numeric will be consider)}
 
-\item{group.col}{column in which the group is standing}
+\item{group.col}{column of the group info}
 
 \item{r.cutoff_env}{the R²-cutoff of the environment}
 
@@ -28,7 +28,7 @@ plot_DCA(veg, env = NULL, weigth = 0, group.col = 0,
 
 \item{lwd}{line size}
 
-\item{cex}{scaled plot}
+\item{cex}{scales plot}
 
 \item{cex.lab}{scale of label}
 
